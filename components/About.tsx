@@ -25,26 +25,28 @@ export default function About() {
 
           <GsapScrollReveal direction="up" distance={30} delay={0.1}>
             <p className="text-base text-ink leading-relaxed mb-5">
-              I'm <strong className="text-ink font-medium">Francis Ganyo</strong>, a software developer
-              and CS student with a focus on building real products that solve real problems — especially
-              in African markets.
+              I'm <strong className="text-ink font-medium">Francis Ganyo</strong> — a software
+              developer who believes technology should work for people, not the other way around.
+              I specialize in turning complex problems into clean, production-ready software that
+              ships and scales.
             </p>
           </GsapScrollReveal>
 
           <GsapScrollReveal direction="up" distance={30} delay={0.15}>
             <p className="text-base text-ink leading-relaxed mb-5">
-              My work spans full-stack web apps, SaaS platforms, fintech tools, and automation systems.
-              I'm backend-heavy but comfortable across the stack. I've shipped a school management
-              platform designed specifically for Ghana's education system, built trading bots, invoice
-              tools, and more.
+              My work spans backend systems, SaaS platforms, fintech infrastructure, and automation
+              tools — from a school management platform built for Ghana's education system to trading
+              bots and invoice engines. I'm backend-heavy but comfortable across the full stack,
+              with a focus on Django, Node.js, and modern TypeScript.
             </p>
           </GsapScrollReveal>
 
           <GsapScrollReveal direction="up" distance={30} delay={0.2}>
             <p className="text-base text-ink leading-relaxed mb-10">
-              I care about clean architecture, production-ready code, and products that actually work
-              for the users they're built for. Open to collaboration, freelance projects, and
-              startup opportunities.
+              What drives me is building products that make a tangible difference — especially for
+              African markets where great software is still the exception, not the norm. Whether it's
+              a freelance project, a startup idea, or an open-source collaboration, I'm always open
+              to building something that matters.
             </p>
           </GsapScrollReveal>
 
