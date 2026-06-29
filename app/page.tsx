@@ -5,10 +5,14 @@ import About from '../components/About'
 import Contact from '../components/Contact'
 import Pricing from '../components/Pricing'
 import Footer from '../components/Footer'
+import GsapFloatingOrbs from '../components/GsapFloatingOrbs'
+import GsapCursor from '../components/GsapCursor'
 
 export default function Home() {
   return (
     <main className="relative bg-paper">
+      <GsapFloatingOrbs />
+      <GsapCursor />
       <Nav />
       <Hero />
 

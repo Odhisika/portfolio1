@@ -46,7 +46,7 @@ export default function ProjectCard({ project, index, featured = false }: Projec
           <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${categoryColors[project.category]}`}>
             {project.category}
           </span>
-          <span className="flex items-center gap-1.5 text-xs text-muted">
+          <span className="flex items-center gap-1.5 text-xs text-ink/70">
             <span className={`w-1.5 h-1.5 rounded-full ${statusDot[project.status]}`} />
             {statusLabel[project.status]}
           </span>
@@ -55,7 +55,7 @@ export default function ProjectCard({ project, index, featured = false }: Projec
           href={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-muted hover:text-accent transition-colors shrink-0"
+          className="text-ink/40 hover:text-accent transition-colors shrink-0"
           aria-label="View on GitHub"
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
@@ -70,7 +70,7 @@ export default function ProjectCard({ project, index, featured = false }: Projec
       </h3>
 
       {/* Description */}
-      <p className="text-sm text-muted leading-relaxed mb-6 flex-1">
+      <p className="text-sm text-ink leading-relaxed mb-6 flex-1">
         {featured ? project.longDesc : project.description}
       </p>
 
@@ -79,7 +79,7 @@ export default function ProjectCard({ project, index, featured = false }: Projec
         {project.tags.slice(0, featured ? 6 : 4).map((tag) => (
           <span
             key={tag}
-            className="font-mono text-xs px-2.5 py-1 rounded-md bg-paper text-muted border border-border"
+            className="font-mono text-xs px-2.5 py-1 rounded-md bg-white text-ink/80 border border-ink/10"
           >
             {tag}
           </span>

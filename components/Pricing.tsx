@@ -1,6 +1,7 @@
 'use client'
 
-import FadeIn from './FadeIn'
+import GsapScrollReveal from './GsapScrollReveal'
+import GsapSectionTitle from './GsapSectionTitle'
 
 interface PricingTier {
   name: string
@@ -135,9 +136,9 @@ function PricingCard({ tier, index, category }: { tier: PricingTier; index: numb
       )}`
 
   return (
-    <FadeIn delay={index * 0.1}>
+    <GsapScrollReveal direction="up" distance={40} delay={index * 0.08}>
       <div
-        className={`relative flex flex-col bg-surface border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
+        className={`relative flex flex-col bg-white border rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${
           tier.highlighted
             ? 'border-accent shadow-md shadow-accent/5'
             : 'border-border hover:border-accent/30'
@@ -149,11 +150,11 @@ function PricingCard({ tier, index, category }: { tier: PricingTier; index: numb
           </span>
         )}
 
-        <p className="font-mono text-xs text-muted tracking-widest uppercase mb-1">
+        <p className="font-mono text-xs text-ink/70 tracking-widest uppercase mb-1">
           {tier.name}
         </p>
         <p className="font-display text-3xl text-ink mb-3">{tier.price}</p>
-        <p className="text-sm text-muted leading-relaxed mb-6">{tier.description}</p>
+        <p className="text-sm text-ink/80 leading-relaxed mb-6">{tier.description}</p>
 
         <ul className="flex flex-col gap-3 mb-8 flex-1">
           {tier.features.map((feature) => (
@@ -193,7 +194,7 @@ function PricingCard({ tier, index, category }: { tier: PricingTier; index: numb
           </svg>
         </a>
       </div>
-    </FadeIn>
+    </GsapScrollReveal>
   )
 }
 
@@ -209,16 +210,9 @@ function PricingSection({
   tiers: PricingTier[]
 }) {
   return (
-    <section id={id} className="py-28 px-6 max-w-6xl mx-auto">
+    <section id={id} className="py-28 px-6 max-w-6xl mx-auto bg-[#F0EDE6]">
       <div className="mb-14">
-        <FadeIn>
-          <p className="font-mono text-xs text-muted tracking-widest uppercase mb-3">
-            {label}
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl text-ink">
-            {title}<span className="text-accent">.</span>
-          </h2>
-        </FadeIn>
+        <GsapSectionTitle label={label} title={title} />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-start">

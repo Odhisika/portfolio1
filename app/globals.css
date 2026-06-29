@@ -8,6 +8,7 @@
   --font-display: 'DM Serif Display', serif;
   --font-body: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
+  --animation-iteration: infinite;
 }
 
 * {
@@ -38,3 +39,159 @@ body {
 ::-webkit-scrollbar-track { background: #F7F5F0; }
 ::-webkit-scrollbar-thumb { background: #D0D0D0; border-radius: 3px; }
 ::-webkit-scrollbar-thumb:hover { background: #1A56FF; }
+
+/* ─── Cosmic Parallax Background ─── */
+
+.cosmic-parallax-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #020111 0%, #20124d 40%, #0d0d2b 70%, #000 100%);
+}
+
+#stars {
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: animStar 50s linear var(--animation-iteration);
+}
+
+#stars2 {
+  width: 2px;
+  height: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: animStar 100s linear var(--animation-iteration);
+}
+
+#stars3 {
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: animStar 150s linear var(--animation-iteration);
+}
+
+#horizon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40%;
+  background: linear-gradient(to bottom, transparent 0%, #1a0533 40%, #0f0220 100%);
+}
+
+.glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 200px;
+  background: radial-gradient(ellipse at center, rgba(100, 50, 255, 0.3) 0%, transparent 70%);
+}
+
+#earth {
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 50%;
+  background: radial-gradient(ellipse at center bottom, #1a0533 0%, #0f0220 40%, transparent 70%);
+  border-radius: 50%;
+}
+
+#title {
+  position: absolute;
+  bottom: 32%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.08);
+  letter-spacing: 0.2em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-display);
+}
+
+#subtitle {
+  position: absolute;
+  bottom: 26%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: clamp(0.7rem, 1.5vw, 1.1rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.15);
+  letter-spacing: 0.15em;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  font-family: var(--font-mono);
+}
+
+#subtitle span {
+  display: inline-block;
+  opacity: 0;
+}
+
+.subtitle-part-1 {
+  animation: animGravity 8s ease-in-out var(--animation-iteration);
+}
+
+.subtitle-part-2 {
+  animation: animDont 8s ease-in-out var(--animation-iteration);
+}
+
+.subtitle-part-3 {
+  animation: animLet 8s ease-in-out var(--animation-iteration);
+}
+
+.subtitle-part-4 {
+  animation: animGo 8s ease-in-out var(--animation-iteration);
+}
+
+@keyframes animStar {
+  from { transform: translateY(0px); }
+  to { transform: translateY(-2000px); }
+}
+
+@keyframes animGravity {
+  0% { transform: translateY(-26px); opacity: 0; }
+  30%, 80% { letter-spacing: 40px; padding-left: 40px; transform: translateY(0px); opacity: 1; }
+  92%, 100% { letter-spacing: 35px; padding-left: 35px; transform: translateY(-4px); opacity: 0; }
+}
+
+@keyframes animDont {
+  0%, 15% { transform: translateY(-26px); opacity: 0; }
+  35%, 80% { transform: translateY(0px); opacity: 1; }
+  92%, 100% { transform: translateY(-4px); opacity: 0; }
+}
+
+@keyframes animLet {
+  0%, 25% { transform: translateY(-26px); opacity: 0; }
+  45%, 80% { transform: translateY(0px); opacity: 1; }
+  92%, 100% { transform: translateY(-4px); opacity: 0; }
+}
+
+@keyframes animGo {
+  0%, 35% { transform: translateY(-26px); opacity: 0; }
+  55%, 80% { transform: translateY(0px); opacity: 1; }
+  92%, 100% { transform: translateY(-4px); opacity: 0; }
+}
+
+@keyframes scrollDot {
+  0%, 100% { transform: translateY(-100%); }
+  50% { transform: translateY(200%); }
+}
+
+.animate-scrollDot {
+  animation: scrollDot 2s ease-in-out infinite;
+}
+
