@@ -7,11 +7,11 @@ const siteName = 'Francis Ganyo Software Developer'
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: siteName,
-  description: 'Software developer building scalable, real world solutions across web, fintech, and automation. Based in Ghana.',
+  description: 'Software developer — also known as Odhisika — building scalable, real world solutions across web, fintech, and automation. Based in Ghana.',
   robots: { index: true, follow: true },
   openGraph: {
     title: siteName,
-    description: 'Full-stack developer with a focus on backend systems, APIs, and African digital products.',
+    description: 'Odhisika (Francis Ganyo) — Full-stack developer with a focus on backend systems, APIs, and African digital products.',
     url: siteUrl,
     siteName: 'Francis Ganyo',
     locale: 'en_US',
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: siteName,
-    description: 'Full-stack developer with a focus on backend systems, APIs, and African digital products.',
+    description: 'Odhisika (Francis Ganyo) — Full-stack developer with a focus on backend systems, APIs, and African digital products.',
   },
 }
 
@@ -31,11 +31,12 @@ const jsonLd = {
       '@type': 'WebSite',
       name: siteName,
       url: siteUrl,
-      description: 'Software developer building scalable, real-world solutions across web, fintech, and automation.',
+      description: 'Software developer — also known as Odhisika — building scalable, real-world solutions across web, fintech, and automation.',
     },
     {
       '@type': 'Person',
       name: 'Francis Ganyo',
+      alternateName: 'Odhisika',
       url: siteUrl,
       jobTitle: 'Software Developer',
       knowsAbout: ['Node.js', 'Django', 'React', 'TypeScript', 'PostgreSQL', 'Python', 'Firebase', 'Docker'],

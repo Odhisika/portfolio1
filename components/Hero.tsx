@@ -83,7 +83,7 @@ export default function Hero() {
           ref={subtitleRef}
           className="font-display text-3xl sm:text-4xl md:text-5xl text-zinc-300 italic leading-tight"
         >
-          Software developer
+          Odhisika / Software developer
         </p>
       </div>
 
@@ -92,7 +92,7 @@ export default function Hero() {
         ref={descRef}
         className="text-base md:text-lg text-zinc-300 max-w-xl leading-relaxed mb-12"
       >
-        I am a backend-heavy full-stack developer and Computer Science student focused on
+        I'm Odhisika — a backend-heavy full-stack developer and Computer Science student focused on
         building robust, real-world products that solve tangible problems. From multi-tenant
         school management SaaS platforms in Ghana to algorithmic trading automation and
         fintech integrations, I engineer systems designed for scale and clean execution.
