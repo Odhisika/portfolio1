@@ -25,7 +25,7 @@ export default function About() {
 
           <GsapScrollReveal direction="up" distance={30} delay={0.1}>
             <p className="text-base text-ink leading-relaxed mb-5">
-              I'm <strong className="text-ink font-medium">Francis Ganyo</strong> (<strong className="text-ink font-medium">Odhisika</strong>) — a software
+              I'm <strong className="text-ink font-medium">Francis Ganyo</strong> — a software
               developer who believes technology should work for people, not the other way around.
               I specialize in turning complex problems into clean, production-ready software that
               ships and scales.
