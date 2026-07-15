@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
             <p className="text-ink leading-relaxed">
               Francis Ganyo ("we", "our", "us") respects your privacy and is committed to protecting your
               personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your
-              information when you visit our website <strong>https://francisganyo.dev</strong> (the "Site") or use our
+              information when you visit our website <strong>https://odhisika.netlify.app/</strong> (the "Site") or use our
               services.
             </p>
           </section>
